@@ -4,22 +4,36 @@ import './App.css';
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          My Website is running
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Info />
+      <AddItem />
+      <AddItem />
+      <AddItem />
     </div>
   );
+}
+
+function Info() {
+  const title = "Inventory System"
+  const showTitle = true;
+
+  return (
+    <div>
+      <h1>{showTitle ? title : ""}</h1>
+      <p>Manage your stuff.</p>
+    </div>
+  );
+}
+
+function AddItem() {
+  return (
+    <div>
+      <form>
+        <label for="text-form">Type Something</label>
+        <input type="text" id="text-form"/>
+        <Info />
+      </form>
+    </div>
+  )
 }
 
 export default App;
