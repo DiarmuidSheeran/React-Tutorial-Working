@@ -1,5 +1,6 @@
 import logo from './logo.svg';
 import './App.css';
+import Info from "./info.js"
 
 function App() {
   return (
@@ -12,22 +13,6 @@ function App() {
   );
 }
 
-function Info() {
-  const title = "Inventory System"
-  const showTitle = true;
-
-  if (showTitle) {
-    return (
-      <div>
-        <h1>{title}</h1>
-        <p>Manage your stuff.</p>
-      </div>
-    );
-  } else {
-    return <p>Empty</p>
-  }
-}
-  
 
 function AddItem() {
   const value = "default";
