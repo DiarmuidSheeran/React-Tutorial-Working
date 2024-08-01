@@ -14,17 +14,22 @@ function App() {
 }
 
 
-function AddItem(props) {
-  const value = props.text;
+function AddItem({ text, number = 4 }) {
   return (
     <div>
       <form>
         <label for="text-form">Type Something</label>
-        <input type="text" value={value} id="text-form"/>
+        <input type="text" value={text} id="text-form"/>
+        <p>{number}</p>
         <Info />
       </form>
     </div>
   )
 }
+
+AddItem.defaultProps = {
+  number: 2,
+  text: "default",
+};
 
 export default App;
