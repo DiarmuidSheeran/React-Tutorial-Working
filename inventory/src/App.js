@@ -6,16 +6,16 @@ function App() {
   return (
     <div className="App">
       <Info />
-      <AddItem />
-      <AddItem />
-      <AddItem />
+      <AddItem text="Sam" number={2}/>
+      <AddItem text="Joe" />
+      <AddItem text="Test"/>
     </div>
   );
 }
 
 
-function AddItem() {
-  const value = "default";
+function AddItem(props) {
+  const value = props.text;
   return (
     <div>
       <form>
